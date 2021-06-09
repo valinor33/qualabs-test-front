@@ -1,0 +1,46 @@
+.header {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #b3b3b3;
+  border-radius: 18px 18px 0 0;
+  height: 70px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  height: 40px;
+  border-radius: 15px;
+  text-align: center;
+  width: 150px;
+  border: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  font-weight: 600;
+  color: white;
+  box-shadow: 2px 2px 2px 0px rgb(126, 124, 126);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+.btn:first-child {
+  margin-right: 20px;
+}
+
+.content_module {
+  background-color: #48406f;
+}
+.content_module:hover {
+  background-color: #352f52;
+}
+
+.auth_module {
+  background-color: #8c5b96;
+}
+.auth_module:hover {
+  background-color: #6d4675;
+}
