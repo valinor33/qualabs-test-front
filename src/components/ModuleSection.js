@@ -20,10 +20,10 @@ function ModuleSection() {
                 <p className="user"> User 5  </p>
             </section>
             <section className="action-container">
-                <button className="btn-action">Submit<img src={iconSubmit} alt="submit" /></button>
-                <button className="btn-action"><img src={iconCreate} alt="create" />Create</button>
-                <button className="btn-action">Advice <img src={iconAdvice} alt="advice" /></button>
-                <button className="btn-action">Delete <img src={iconDelete} alt="delete" /></button>
+                <button className="btn-action btn-green">Submit<img src={iconSubmit} alt="submit" /></button>
+                <button className="btn-action btn-salmon"><img src={iconCreate} alt="create" />Create</button>
+                <button className="btn-action btn-yellow">Advice <img src={iconAdvice} alt="advice" /></button>
+                <button className="btn-action btn-red">Delete <img src={iconDelete} alt="delete" /></button>
             </section>
         </div>
     )
