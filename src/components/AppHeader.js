@@ -2,11 +2,20 @@ import React from 'react'
 import AppButton from './AppButton'
 import "./styles/AppHeader.scss"
 
-function AppHeader() {
+function AppHeader({ data }) {
+
+    let content = []
+
+    for (let e in data) {
+        content.push(e)
+    }
+
     return (
         <header className="header">
-            <AppButton content="Content_module" />
-            <AppButton content="Auth_module" />
+            {content.map((e, i) => {
+                return <AppButton content={e} key={i} />
+
+            })}
         </header>
     )
 }

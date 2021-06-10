@@ -1,11 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./styles/AppButton.scss";
 
 function AppButton({ content }) {
-    return (
+    const [selection, setSelection] = useState("")
 
-        <button className="btn "><Link to="#">{content}</Link></button>
+    const handleButton = (e) => {
+        console.log(e.target)
+    }
+
+    console.log(content);
+    return (
+        <button className="btn "><Link to={`/${content}`} onClick={handleButton}>{content}</Link></button>
 
     );
 }
