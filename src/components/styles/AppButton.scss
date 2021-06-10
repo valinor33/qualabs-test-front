@@ -1,11 +1,8 @@
 .btn {
-  // height: 40px;
   border-radius: 12px;
   text-align: center;
   padding: 10px 12px;
-  // width: 150px;
   border: none;
-
   box-shadow: 2px 2px 2px 0px rgb(126, 124, 126);
   margin-right: 15px;
   background-color: #8c5b96;
@@ -22,4 +19,8 @@
 
 .btn:active {
   transform: translateY(2px);
+}
+
+.btn:focus {
+  background-color: #48406f;
 }
