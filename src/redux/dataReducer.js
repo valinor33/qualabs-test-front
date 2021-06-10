@@ -1,11 +1,12 @@
+
 function dataReducer(state = { data: [] }, action) {
     switch (action.type) {
-        case "RESET_DB":
+        case "LOAD_DATA":
             return {
                 ...state,
-                users: []
-
+                data: [action.payload]
             };
+
         default:
             return state;
     }
