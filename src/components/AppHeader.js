@@ -1,11 +1,12 @@
 import React from 'react'
+import AppButton from './AppButton'
 import "./styles/AppHeader.scss"
 
 function AppHeader() {
     return (
         <header className="header">
-            <button className="btn content_module">Content_module</button>
-            <button className="btn auth_module">Auth_module</button>
+            <AppButton content="Content_module" />
+            <AppButton content="Auth_module" />
         </header>
     )
 }
