@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import axios from "axios"
-import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import actions from "./redux/actions.js";
 import AppHeader from "./components/AppHeader.js"
@@ -9,13 +8,16 @@ import Module from "./components/Module.js"
 const URL = "http://localhost:4000/api/users"
 
 export const App = () => {
-  const data = useSelector((state) => state.data);
   const dispatch = useDispatch()
 
   useEffect(() => {
     axios.get(URL)
       .then(function ({ data }) {
-        dispatch(actions.loadData(data))
+        console.log(data);
+
+        dispatch(actions.loadAuth(data.auth_module))
+        dispatch(actions.loadContent(data.content_module))
+
       })
       .catch(function (error) {
         console.log(error);
@@ -24,8 +26,8 @@ export const App = () => {
 
   return (
     <div>
-      <AppHeader data={data} />
-      <Module data={data} />
+      <AppHeader />
+      <Module />
     </div>
   )
 }

@@ -1,17 +1,18 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
+import { useDispatch } from "react-redux";
+import actions from "../redux/actions.js";
 import "./styles/AppButton.scss";
 
 function AppButton({ content }) {
-    const [selection, setSelection] = useState("")
+    const dispatch = useDispatch()
 
     const handleButton = (e) => {
-        console.log(e.target)
+        const val = e.target.value.toLowerCase()
+        dispatch(actions.loadModule(val))
     }
 
-    console.log(content);
     return (
-        <button className="btn "><Link to={`/${content}`} onClick={handleButton}>{content}</Link></button>
+        <button className="btn" onClick={handleButton} value={content}>{content}</button>
 
     );
 }
