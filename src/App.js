@@ -15,8 +15,7 @@ export const App = () => {
       .then(function ({ data }) {
         console.log(data);
 
-        dispatch(actions.loadAuth(data.auth_module))
-        dispatch(actions.loadContent(data.content_module))
+        dispatch(actions.loadData(data))
 
       })
       .catch(function (error) {

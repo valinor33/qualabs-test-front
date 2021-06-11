@@ -1,24 +1,17 @@
-const loadAuth = (data) => {
+const loadData = (data) => {
     return {
-        type: "LOAD_AUTH",
-        payload: data
-    }
-}
-
-const loadContent = (data) => {
-    return {
-        type: "LOAD_CONTENT",
+        type: "LOAD_DATA",
         payload: data
     }
 }
 
 const loadModule = (data) => {
     return {
-        type: "SELECTED_MODULE",
+        type: "LOAD_MODULE",
         payload: data
     }
 }
 
-const actions = { loadAuth, loadContent, loadModule }
+const actions = { loadData, loadModule }
 
 export default actions
