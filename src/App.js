@@ -6,7 +6,7 @@ import actions from "./redux/actions.js";
 import AppHeader from "./components/AppHeader.js"
 import Module from "./components/Module.js"
 
-const URL = "http://localhost:4000/api/users"
+const URL = "https://qualabs-api.herokuapp.com/api/users"
 
 export const App = () => {
   const dispatch = useDispatch()
