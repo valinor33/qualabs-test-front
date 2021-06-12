@@ -8,7 +8,6 @@ import iconSubmit from "../assets/submit.svg"
 
 function ModuleSection() {
 
-    const [number, setNumber] = useState(1)
     return (
         <div className="module-section">
             <h3>Numbers of users in module {number}:</h3>
