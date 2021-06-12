@@ -1,10 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import actions from "../redux/actions.js";
 import "./styles/ModuleHeader.scss"
 /* components */
-import AppButton from './AppButton'
 
 function ModuleHeader() {
     const dispatch = useDispatch()
