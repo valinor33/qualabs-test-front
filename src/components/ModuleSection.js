@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { useSelector } from 'react-redux'
 import "./styles/ModuleSection.scss"
 
 import iconDelete from "../assets/delete.svg"
@@ -7,17 +8,28 @@ import iconAdvice from "../assets/advice.svg"
 import iconSubmit from "../assets/submit.svg"
 
 function ModuleSection() {
+    const state = useSelector((state) => state);
 
-    const [number, setNumber] = useState(1)
+    const { selectedModule } = state
+    const { module } = state
+    const { data } = state
+
+    let modules = Object.keys(data[module]);
+
+    const provider = modules[selectedModule - 1]
+
+    const users = data[module][provider]
+
     return (
         <div className="module-section">
-            <h3>Numbers of users in module {number}:</h3>
+            <h3>Numbers of users in module {selectedModule}:</h3>
             <section className="user-container">
-                <p className="user"> User 1 </p>
-                <p className="user"> User 2 </p>
-                <p className="user"> User 3 </p>
-                <p className="user"> User 4 </p>
-                <p className="user"> User 5  </p>
+                {
+                    users && users.map((e, i) => {
+                        return <p className="user"> User {i + 1}: "{e}" </p>
+                    })
+                }
+
             </section>
             <section className="action-container">
                 <button className="btn-action btn-green">Submit<img src={iconSubmit} alt="submit" /></button>

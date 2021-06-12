@@ -1,5 +1,5 @@
 
-function dataReducer(state = { data: [], module, isDataLoaded: false }, action) {
+function dataReducer(state = { data: [], module, isDataLoaded: false, selectedModule: 1 }, action) {
     switch (action.type) {
         case "LOAD_DATA":
             return {
@@ -16,6 +16,12 @@ function dataReducer(state = { data: [], module, isDataLoaded: false }, action) 
             return {
                 ...state,
                 isDataLoaded: true,
+            }
+
+        case "SELECTED_MODULE":
+            return {
+                ...state,
+                selectedModule: action.payload
             }
 
         default:

@@ -18,6 +18,13 @@ const isDataLoaded = () => {
     }
 }
 
-const actions = { loadData, loadModule, isDataLoaded }
+const selectedModule = (data) => {
+    return {
+        type: "SELECTED_MODULE",
+        payload: data
+    }
+}
+
+const actions = { loadData, loadModule, isDataLoaded, selectedModule }
 
 export default actions

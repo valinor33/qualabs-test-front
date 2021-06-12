@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import axios from "axios"
 import { useDispatch } from "react-redux";
 import actions from "./redux/actions.js";
+/* components */
 import AppHeader from "./components/AppHeader.js"
 import Module from "./components/Module.js"
 

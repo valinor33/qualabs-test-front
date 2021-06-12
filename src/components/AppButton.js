@@ -9,6 +9,7 @@ function AppButton({ content }) {
     const handleButton = (e) => {
         const val = e.target.value.toLowerCase()
         dispatch(actions.loadModule(val))
+        dispatch(actions.selectedModule(1))
     }
 
     return (

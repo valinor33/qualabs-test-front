@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import "./styles/Module.scss"
+/* components */
 import ModuleHeader from "./ModuleHeader.js"
 import ModuleSection from './ModuleSection'
 
