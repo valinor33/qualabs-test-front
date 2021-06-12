@@ -12,6 +12,12 @@ const loadModule = (data) => {
     }
 }
 
-const actions = { loadData, loadModule }
+const isDataLoaded = () => {
+    return {
+        type: "IS_DATA_LOADED",
+    }
+}
+
+const actions = { loadData, loadModule, isDataLoaded }
 
 export default actions

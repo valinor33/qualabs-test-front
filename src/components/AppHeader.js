@@ -6,14 +6,13 @@ import AppButton from './AppButton'
 function AppHeader() {
     const state = useSelector(state => state.data)
     let content = Object.keys(state);
-    console.log(content);
 
     return (
         <header className="header">
             {
-                content.map(e => {
+                content.map((e, i) => {
 
-                    return <AppButton content={e} />
+                    return <AppButton content={e} key={i} />
                 })
             }
 

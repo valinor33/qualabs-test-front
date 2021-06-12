@@ -1,14 +1,21 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import "./styles/Module.scss"
 import ModuleHeader from "./ModuleHeader.js"
 import ModuleSection from './ModuleSection'
 
 
-function Module({ data }) {
+function Module() {
+    const isDataLoaded = useSelector(state => state.isDataLoaded)
     return (
         <div className="module-main">
-            <ModuleHeader />
-            <ModuleSection />
+            { isDataLoaded &&
+                <>
+                    <ModuleHeader />
+                    <ModuleSection />
+                </>
+            }
+
         </div>
     )
 }

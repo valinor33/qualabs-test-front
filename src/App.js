@@ -13,15 +13,16 @@ export const App = () => {
   useEffect(() => {
     axios.get(URL)
       .then(function ({ data }) {
-        console.log(data);
 
         dispatch(actions.loadData(data))
+        dispatch(actions.loadModule("auth_module"))
+        dispatch(actions.isDataLoaded())
 
       })
       .catch(function (error) {
         console.log(error);
       })
-  }, [])
+  })
 
   return (
     <div>
